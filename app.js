@@ -14,17 +14,19 @@ const translations = {
     pageTitle: "AKTiiV24 — rakennus- ja remonttityöt Suomessa",
     metaDescription: "AKTiiV24 tekee rakennus- ja remonttitöitä Suomessa ja Uudellamaalla. Sisäremontit, saunaremontit, lattiat, kipsilevytyöt, maalaus, purkutyöt ja julkisivutyöt.",
     ogDescription: "Rakennus- ja remonttityöt yksityisasiakkaille, taloyhtiöille, yrityksille ja urakoitsijoille. Palvelemme Uudellamaalla ja muualla Suomessa.",
-    formThanks: "Kiitos! Lomake toimii tällä hetkellä esittelytilassa. Ota yhteyttä puhelimitse 041 749 1334 tai sähköpostilla aktiiv24@gmail.com."
+    sendEmail: "Lähetä sähköpostilla",
+    mailtoMessage: "Sähköpostiohjelma avataan. Tarkista tiedot ja liitä kuvat mukaan ennen lähettämistä.",
+    formThanks: "Kiitos! Ota yhteyttä puhelimitse 041 749 1334 tai sähköpostilla aktiiv24@gmail.com."
   },
   en: {
     pageTitle: "AKTiiV24 — construction and renovation work in Finland",
     metaDescription: "AKTiiV24 provides construction and renovation work in Finland and Uusimaa: interior renovations, sauna renovations, floors, drywall work, painting, demolition and facade work.",
     ogDescription: "Construction and renovation work for private clients, housing companies, businesses and contractors. We serve Uusimaa and other areas in Finland.",
     navServices: "Services", navPortfolio: "Portfolio", navAbout: "About", navWork: "Work", navContacts: "Contacts",
-    ctaRequest: "Send request", ctaPortfolio: "View work",
+    ctaRequest: "Send request", ctaPortfolio: "View services",
     heroEyebrow: "Construction + order + result",
     heroTitle: "AKTiiV24 — construction and renovation work in Finland",
-    heroLead: "Interior and exterior work, full renovations, saunas, floors, walls, facades and demanding construction tasks — done carefully, clearly and responsibly.",
+    heroLead: "Construction and renovation work for private clients, housing companies, businesses and contractors. A clear workflow, tidy execution and a finished result on the agreed schedule.",
     statExperienceNumber: "25+ years", statExperience: "experience", statFinland: "work across Finland", statToolsNumber: "100 % own", statTools: "tools", statClients: "private and business clients",
     strongIntro: "AKTiiV24 carries out construction and renovation work with a clear process: agreed work, tidy execution and a finished result without unnecessary hassle. We serve private clients, housing companies, businesses and contractors across Finland.",
     aboutEyebrow: "Company", aboutTitle: "A construction company with a practical approach",
@@ -51,43 +53,43 @@ const translations = {
     portfolioLead: "The images below illustrate service areas and the style of the finished result. Real project photos will be added with client permission.",
     filterAll: "All", filterInterior: "Interior", filterSauna: "Saunas", filterFloor: "Floors", filterFacade: "Facades",
     portfolio1: "Apartment renovation", portfolio2: "Sauna renewal", portfolio3: "Floor installation", portfolio4: "Wall painting", portfolio5: "House facade", portfolio6: "Wet room",
-    processEyebrow: "Process", processTitle: "How the work goes",
-    process1Title: "Request", process1Text: "You send a description, address, desired timing and photos.",
-    process2Title: "Details", process2Text: "We clarify the scope, materials, access and expectations.",
-    process3Title: "Estimate", process3Text: "We prepare a preliminary estimate of timing and cost.",
-    process4Title: "Agreement", process4Text: "We confirm the work format and the next step.",
-    process5Title: "Execution", process5Text: "We work according to the agreed plan.",
+    processEyebrow: "Process", processTitle: "How the work proceeds",
+    process1Title: "Contact", process1Text: "Send a short description of the work, photos of the site and your preferred schedule.",
+    process2Title: "Assessment", process2Text: "We review the work and, if needed, agree on a site visit.",
+    process3Title: "Quote", process3Text: "You receive a clear estimate of the work content, schedule and cost.",
+    process4Title: "Execution", process4Text: "The work is done according to the agreed plan, tidily and practically.",
+    process5Title: "Finished result", process5Text: "We review the final result and make sure the agreed work has been completed.",
     process6Title: "Completion", process6Text: "We check the result and hand over the site.",
     b2bTitle: "Cooperation with companies and contractors",
     b2bText: "AKTiiV24 can carry out individual construction and renovation stages for companies, contractors and property owners. We can join a project for a defined scope or as an additional resource on site.",
     b2b1: "interior renovation work;", b2b2: "demolition, drywall and framing;", b2b3: "floors, painting, saunas and facades;", b2b4: "hourly work or agreed scope.",
     workEyebrow: "Team", workTitle: "Work and cooperation", workLead: "If you have experience, tools, responsibility and the wish to do quality work, send us your details.",
-    reviewsEyebrow: "Reviews", reviewsTitle: "Client reviews", reviewsLead: "We are gradually collecting reviews and examples of completed work so new clients can better understand our approach.",
+    reviewsEyebrow: "Reviews", reviewsTitle: "Client reviews", reviewsLead: "Client feedback will be added to the website with client permission. You can ask for more information about earlier projects by contacting us.",
     faqTitle: "Frequently asked questions",
-    faq1Q: "Do you only work on large projects?", faq1A: "No. We can complete a single work stage or a larger renovation. It depends on the task, schedule and availability.",
-    faq2Q: "Can I send photos for a preliminary estimate?", faq2A: "Yes. Photos help us understand the scope faster and prepare an initial answer.",
-    faq3Q: "Do you work with companies?", faq3A: "Yes. We work with private clients, companies, contractors and property owners.",
-    faq4Q: "Can I order only one type of work?", faq4A: "Yes. You can order floors, painting, demolition, doors, sauna work, facade work or another specific stage.",
-    faq5Q: "Do you buy the materials yourselves?", faq5A: "Material purchasing is agreed separately. Different options are possible depending on the project and agreement.",
-    faq6Q: "Which area do you work in?", faq6A: "Our main working area is Finland. The exact site and travel possibilities are discussed separately.",
+    faq1Q: "How quickly can the work start?", faq1A: "The start depends on the scope, location and schedule. Small jobs can often be arranged flexibly.",
+    faq2Q: "Do you do small repair jobs?", faq2A: "Yes. We do both small repair and finishing jobs and larger renovation projects.",
+    faq3Q: "Can I request an estimate based on photos?", faq3A: "Yes. Send photos, the site location and a short description of the needed work.",
+    faq4Q: "Do you work only in Uusimaa?", faq4A: "The main work area is Uusimaa, but depending on the job we can also agree projects elsewhere in Finland.",
+    faq5Q: "Do you work for companies and contractors?", faq5A: "Yes. We serve private clients, housing companies, businesses and contractors.",
     contactsEyebrow: "Contacts", contactsTitle: "Contact AKTiiV24",
     contactsLead: "Describe the work, attach photos of the site and tell us the preferred schedule. AKTiiV24 openly shows contact and registration details so clients know exactly who they are dealing with.",
     quoteEyebrow: "Quote request", quoteTitle: "What information do we need for a quote?", quoteText: "For a quick estimate, send us the site address or city, a short description of the needed work, a few photos of the current situation, your preferred schedule and whether the materials have already been purchased or you need help choosing them.",
     contactPhone: "Phone:", contactCompany: "Company:", contactRegion: "Region:", contactLanguages: "Contact languages:", finland: "Finland",
     labelName: "Name", labelPhone: "Phone", labelCity: "City", labelExperience: "Experience and skills", labelContactLanguage: "Preferred contact language",
     chooseLanguage: "Choose language", labelAddress: "Site address", labelTask: "What work is needed", labelDate: "Preferred schedule",
-    sendRequest: "Send request", footerText: "Construction and renovation work in Finland", footerRights: "© 2026 AKTiiV24. All rights reserved.",
-    formThanks: "Thank you! The form is currently in demo mode. Please contact us by phone at 041 749 1334 or by email at aktiiv24@gmail.com."
+    sendRequest: "Send application", sendEmail: "Send by email", footerText: "Construction and renovation work in Finland", footerRights: "© 2026 AKTiiV24. All rights reserved.",
+    mailtoMessage: "Your email app is opening. Check the details and attach photos before sending.",
+    formThanks: "Thank you! Please contact us by phone at 041 749 1334 or by email at aktiiv24@gmail.com."
   },
   et: {
     pageTitle: "AKTiiV24 — ehitus- ja remonditööd Soomes",
     metaDescription: "AKTiiV24 teeb ehitus- ja remonditöid Soomes ja Uusimaal: siseremont, saunaremont, põrandad, kipsplaaditööd, värvimine, lammutustööd ja fassaaditööd.",
     ogDescription: "Ehitus- ja remonditööd eraklientidele, korteriühistutele, ettevõtetele ja alltöövõtjatele. Teenindame Uusimaal ja mujal Soomes.",
     navServices: "Teenused", navPortfolio: "Portfoolio", navAbout: "Meist", navWork: "Töö", navContacts: "Kontakt",
-    ctaRequest: "Saada päring", ctaPortfolio: "Vaata töid",
+    ctaRequest: "Saada päring", ctaPortfolio: "Vaata teenuseid",
     heroEyebrow: "Ehitus + kord + tulemus",
     heroTitle: "AKTiiV24 — ehitus- ja remonditööd Soomes",
-    heroLead: "Sise- ja välistööd, täisremondid, saunad, põrandad, seinad, fassaadid ja erinevad ehitustööd — hoolikalt, selgelt ja vastutustundlikult.",
+    heroLead: "Ehitus- ja remonditööd eraklientidele, korteriühistutele, ettevõtetele ja alltöövõtjatele. Selge tööprotsess, puhas teostus ja valmis tulemus kokkulepitud ajakavas.",
     statExperienceNumber: "25+ aastat", statExperience: "kogemust", statFinland: "tööd Soomes", statToolsNumber: "100 % oma", statTools: "tööriistad", statClients: "erakliendid ja ettevõtted",
     strongIntro: "AKTiiV24 teeb ehitus- ja remonditöid selge tööviisiga: kokkulepitud tööd, puhas teostus ja valmis tulemus ilma tarbetu segaduseta. Teenindame erakliente, korteriühistuid, ettevõtteid ja alltöövõtjaid eri piirkondades Soomes.",
     aboutEyebrow: "Ettevõte", aboutTitle: "Praktilise lähenemisega ehitusettevõte",
@@ -114,18 +116,18 @@ const translations = {
     portfolioLead: "Allolevad pildid illustreerivad teenusvaldkondi ja valmis töö stiili. Tegelike objektide fotod lisatakse klientide loal.",
     filterAll: "Kõik", filterInterior: "Siseruumid", filterSauna: "Saunad", filterFloor: "Põrandad", filterFacade: "Fassaadid",
     portfolio1: "Korteri remont", portfolio2: "Sauna uuendus", portfolio3: "Põranda paigaldus", portfolio4: "Seinte värvimine", portfolio5: "Maja fassaad", portfolio6: "Märgruum",
-    processEyebrow: "Protsess", processTitle: "Kuidas töö kulgeb",
-    process1Title: "Päring", process1Text: "Saadate kirjelduse, aadressi, soovitud aja ja fotod.",
-    process2Title: "Täpsustused", process2Text: "Täpsustame töömahu, materjalid, ligipääsu ja ootused.",
-    process3Title: "Hinnang", process3Text: "Koostame esialgse aja- ja kuluhinnangu.",
-    process4Title: "Kokkulepe", process4Text: "Lepime kokku töövormi ja järgmise sammu.",
-    process5Title: "Töö teostus", process5Text: "Töötame kokkulepitud plaani järgi.",
+    processEyebrow: "Protsess", processTitle: "Nii töö edeneb",
+    process1Title: "Kontakt", process1Text: "Saatke lühike töö kirjeldus, objekti fotod ja soovitud ajakava.",
+    process2Title: "Hindamine", process2Text: "Vaatame töö läbi ja vajadusel lepime kokku objekti külastuse.",
+    process3Title: "Pakkumine", process3Text: "Saate selge hinnangu töö sisule, ajakavale ja kuludele.",
+    process4Title: "Teostus", process4Text: "Töö tehakse kokkulepitud plaani järgi, puhtalt ja praktiliselt.",
+    process5Title: "Valmis tulemus", process5Text: "Vaatame tulemuse üle ja veendume, et kokkulepitud töö on tehtud.",
     process6Title: "Üleandmine", process6Text: "Kontrollime tulemuse ja anname objekti üle.",
     b2bTitle: "Koostöö ettevõtete ja alltöövõtjatega",
     b2bText: "AKTiiV24 saab teha eraldi ehitus- ja remondietappe ettevõtetele, alltöövõtjatele ja kinnisvaraomanikele. Saame liituda projektiga kindla töömahu tegijana või lisajõuna objektil.",
     b2b1: "siseremonditööd;", b2b2: "lammutus, kipsplaat ja karkassid;", b2b3: "põrandad, värvimine, saunad ja fassaadid;", b2b4: "tunnitöö või kokkulepitud maht.",
     workEyebrow: "Meeskond", workTitle: "Töö ja koostöö", workLead: "Kui teil on kogemust, tööriistad, vastutustunne ja soov teha kvaliteetset tööd, saatke meile oma andmed.",
-    reviewsEyebrow: "Arvustused", reviewsTitle: "Klientide arvustused", reviewsLead: "Kogume järk-järgult arvustusi ja näiteid tehtud töödest, et uued kliendid saaksid meie lähenemisest paremini aru.",
+    reviewsEyebrow: "Arvustused", reviewsTitle: "Klientide arvustused", reviewsLead: "Klientide tagasiside lisatakse veebilehele klientide loal. Varasemate tööde kohta saate küsida lisainfot meiega ühendust võttes.",
     faqTitle: "Korduma kippuvad küsimused",
     faq1Q: "Kas teete ainult suuri objekte?", faq1A: "Ei. Võime teha nii üksiku tööetapi kui ka suurema remondi. Kõik sõltub ülesandest, ajakavast ja saadavusest.",
     faq2Q: "Kas saab saata fotod esialgse hinnangu jaoks?", faq2A: "Jah. Fotod aitavad töömahtu kiiremini mõista ja esialgse vastuse anda.",
@@ -139,18 +141,19 @@ const translations = {
     contactPhone: "Telefon:", contactCompany: "Ettevõte:", contactRegion: "Piirkond:", contactLanguages: "Suhtluskeeled:", finland: "Soome",
     labelName: "Nimi", labelPhone: "Telefon", labelCity: "Linn", labelExperience: "Kogemus ja oskused", labelContactLanguage: "Sobiv suhtluskeel",
     chooseLanguage: "Valige keel", labelAddress: "Objekti aadress", labelTask: "Milliseid töid on vaja", labelDate: "Soovitud ajakava",
-    sendRequest: "Saada päring", footerText: "Ehitus- ja remonditööd Soomes", footerRights: "© 2026 AKTiiV24. Kõik õigused kaitstud.",
-    formThanks: "Aitäh! Vorm töötab praegu demorežiimis. Palun võtke meiega ühendust telefonil 041 749 1334 või e-postil aktiiv24@gmail.com."
+    sendRequest: "Saada avaldus", sendEmail: "Saada e-postiga", footerText: "Ehitus- ja remonditööd Soomes", footerRights: "© 2026 AKTiiV24. Kõik õigused kaitstud.",
+    mailtoMessage: "E-posti rakendus avaneb. Kontrollige andmed ja lisage fotod enne saatmist.",
+    formThanks: "Aitäh! Palun võtke meiega ühendust telefonil 041 749 1334 või e-postil aktiiv24@gmail.com."
   },
   ru: {
     pageTitle: "AKTiiV24 — строительные и ремонтные работы в Финляндии",
     metaDescription: "AKTiiV24 выполняет строительные и ремонтные работы в Финляндии и Уусимаа: внутренние ремонты, сауны, полы, гипсокартон, покраска, демонтаж и фасады.",
     ogDescription: "Строительные и ремонтные работы для частных клиентов, жилищных товариществ, компаний и подрядчиков. Работаем в Уусимаа и других регионах Финляндии.",
     navServices: "Услуги", navPortfolio: "Портфолио", navAbout: "О нас", navWork: "Работа", navContacts: "Контакты",
-    ctaRequest: "Оставить заявку", ctaPortfolio: "Посмотреть работы",
+    ctaRequest: "Оставить заявку", ctaPortfolio: "Посмотреть услуги",
     heroEyebrow: "Строительство + порядок + результат",
     heroTitle: "AKTiiV24 — строительные и ремонтные работы в Финляндии",
-    heroLead: "Внутренние и наружные работы, ремонт под ключ, сауны, полы, стены, фасады и строительные задачи любой сложности — аккуратно, понятно и с ответственностью.",
+    heroLead: "Строительные и ремонтные работы для частных клиентов, жилищных товариществ, компаний и подрядчиков. Понятный процесс, аккуратное выполнение и готовый результат в согласованные сроки.",
     statExperienceNumber: "25+ лет", statExperience: "опыта", statFinland: "работа по Финляндии", statToolsNumber: "100 % свои", statTools: "инструменты", statClients: "частные и компании",
     strongIntro: "AKTiiV24 выполняет строительные и ремонтные работы с понятным подходом: согласованные задачи, аккуратное выполнение и готовый результат без лишней суеты. Мы работаем с частными клиентами, жилищными товариществами, компаниями и подрядчиками в разных регионах Финляндии.",
     aboutEyebrow: "О компании", aboutTitle: "Строительная компания с практическим подходом",
@@ -178,17 +181,17 @@ const translations = {
     filterAll: "Все", filterInterior: "Интерьер", filterSauna: "Сауны", filterFloor: "Полы", filterFacade: "Фасады",
     portfolio1: "Ремонт квартиры", portfolio2: "Обновление сауны", portfolio3: "Укладка пола", portfolio4: "Покраска стен", portfolio5: "Фасад дома", portfolio6: "Влажное помещение",
     processEyebrow: "Процесс", processTitle: "Как проходит работа",
-    process1Title: "Заявка", process1Text: "Вы отправляете описание, адрес, сроки и фотографии.",
-    process2Title: "Детали", process2Text: "Уточняем объём, материалы, доступ и ожидания.",
-    process3Title: "Оценка", process3Text: "Формируем предварительную оценку сроков и стоимости.",
-    process4Title: "Договорённость", process4Text: "Фиксируем формат работы и следующий шаг.",
-    process5Title: "Выполнение", process5Text: "Работаем по согласованному плану.",
+    process1Title: "Связь", process1Text: "Отправьте краткое описание работы, фотографии объекта и желаемые сроки.",
+    process2Title: "Оценка", process2Text: "Мы разбираем задачу и при необходимости согласуем осмотр объекта.",
+    process3Title: "Предложение", process3Text: "Вы получаете понятную оценку содержания работ, сроков и стоимости.",
+    process4Title: "Выполнение", process4Text: "Работа выполняется по согласованному плану, аккуратно и практично.",
+    process5Title: "Готовый результат", process5Text: "Мы проверяем результат и убеждаемся, что согласованная работа выполнена.",
     process6Title: "Завершение", process6Text: "Проверяем результат и передаём объект.",
     b2bTitle: "Сотрудничество с компаниями и подрядчиками",
     b2bText: "AKTiiV24 готова выполнять отдельные этапы строительных и ремонтных работ для компаний, подрядчиков и владельцев объектов. Мы можем подключаться к проекту как исполнитель на конкретный объём работ или как дополнительный ресурс на объекте.",
     b2b1: "внутренние ремонтные работы;", b2b2: "демонтаж, гипсокартон, каркасы;", b2b3: "полы, покраска, сауны и фасады;", b2b4: "почасовая работа или согласованный объём.",
     workEyebrow: "Команда", workTitle: "Работа и сотрудничество", workLead: "Если у вас есть опыт, инструменты, ответственность и желание работать качественно — отправьте информацию о себе.",
-    reviewsEyebrow: "Отзывы", reviewsTitle: "Отзывы клиентов", reviewsLead: "Мы постепенно собираем отзывы и примеры выполненных работ, чтобы новые клиенты могли лучше оценить наш подход.",
+    reviewsEyebrow: "Отзывы", reviewsTitle: "Отзывы клиентов", reviewsLead: "Отзывы клиентов будут добавлены на сайт с разрешения клиентов. Вы можете запросить дополнительную информацию о прошлых объектах, связавшись с нами.",
     faqTitle: "Частые вопросы",
     faq1Q: "Вы работаете только с большими объектами?", faq1A: "Нет. Мы можем выполнить как отдельный этап работ, так и более крупный ремонт. Всё зависит от задачи, сроков и доступности.",
     faq2Q: "Можно ли отправить фотографии объекта для предварительной оценки?", faq2A: "Да. Фотографии помогают быстрее понять объём работ и подготовить предварительный ответ.",
@@ -202,8 +205,9 @@ const translations = {
     contactPhone: "Телефон:", contactCompany: "Компания:", contactRegion: "Регион:", contactLanguages: "Языки связи:", finland: "Финляндия",
     labelName: "Имя", labelPhone: "Телефон", labelCity: "Город", labelExperience: "Опыт и навыки", labelContactLanguage: "Удобный язык связи",
     chooseLanguage: "Выберите язык", labelAddress: "Адрес объекта", labelTask: "Какие работы нужны", labelDate: "Желаемые сроки",
-    sendRequest: "Отправить заявку", footerText: "Строительные и ремонтные работы в Финляндии", footerRights: "© 2026 AKTiiV24. Все права защищены.",
-    formThanks: "Спасибо! Сейчас форма работает в демонстрационном режиме. Пожалуйста, свяжитесь с нами по телефону 041 749 1334 или email aktiiv24@gmail.com."
+    sendRequest: "Отправить анкету", sendEmail: "Отправить по email", footerText: "Строительные и ремонтные работы в Финляндии", footerRights: "© 2026 AKTiiV24. Все права защищены.",
+    mailtoMessage: "Откроется почтовая программа. Проверьте данные и приложите фотографии перед отправкой.",
+    formThanks: "Спасибо! Пожалуйста, свяжитесь с нами по телефону 041 749 1334 или email aktiiv24@gmail.com."
   }
 };
 
@@ -269,6 +273,30 @@ document.querySelectorAll(".demo-form").forEach((form) => {
       message.textContent = translations[currentLanguage].formThanks;
     }
     form.reset();
+  });
+});
+
+document.querySelectorAll(".quote-form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const body = [
+      `Nimi: ${data.get("client-name") || ""}`,
+      `Puhelin: ${data.get("client-phone") || ""}`,
+      `Sähköposti: ${data.get("client-email") || ""}`,
+      `Kaupunki: ${data.get("city-location") || ""}`,
+      `Työn kuvaus: ${data.get("task") || ""}`,
+      `Aikataulu: ${data.get("date") || ""}`,
+      `Kuvat: ${data.get("photos") || ""}`,
+      `Lisätiedot: ${data.get("more") || ""}`
+    ].join("\n");
+    const subject = encodeURIComponent("Tarjouspyyntö AKTiiV24-sivustolta");
+    const mailto = `mailto:aktiiv24@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+    const message = form.querySelector(".form-message");
+    if (message) {
+      message.textContent = translations[currentLanguage].mailtoMessage || translations.fi.mailtoMessage;
+    }
+    window.location.href = mailto;
   });
 });
 
