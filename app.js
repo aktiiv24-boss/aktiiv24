@@ -215,6 +215,23 @@ const validLanguages = ["fi", "en", "et", "ru"];
 let currentLanguage = localStorage.getItem("aktiiv24-language") || "fi";
 if (!validLanguages.includes(currentLanguage)) currentLanguage = "fi";
 
+const polishFallbackKeys = new Set([
+  "faq4Q",
+  "faq4A",
+  "labelEmail",
+  "labelAddress",
+  "labelTask",
+  "labelPhotos",
+  "photosYes",
+  "photosNo",
+  "labelMore",
+  "photoHint",
+  "footerPhoneLabel",
+  "footerEmailLabel",
+  "footerBusinessLabel",
+  "footerArea"
+]);
+
 function applyLanguage(language) {
   const dictionary = translations[language] || translations.fi;
   document.documentElement.lang = language;
@@ -225,7 +242,8 @@ function applyLanguage(language) {
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
-    if (dictionary[key]) element.textContent = dictionary[key];
+    const value = polishFallbackKeys.has(key) ? translations.fi[key] || fiDefaults[key] : dictionary[key] || translations.fi[key] || fiDefaults[key];
+    if (value) element.textContent = value;
   });
 
   languageButtons.forEach((button) => {
@@ -280,13 +298,16 @@ document.querySelectorAll(".quote-form").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(form);
+    const languageSelect = form.querySelector('select[name="contact-language"]');
+    const languageText = languageSelect?.selectedOptions?.[0]?.textContent?.trim() || data.get("contact-language") || "";
     const body = [
       `Nimi: ${data.get("client-name") || ""}`,
       `Puhelin: ${data.get("client-phone") || ""}`,
-      `Sähköposti: ${data.get("client-email") || ""}`,
-      `Kaupunki: ${data.get("city-location") || ""}`,
-      `Työn kuvaus: ${data.get("task") || ""}`,
-      `Aikataulu: ${data.get("date") || ""}`,
+      `Email: ${data.get("client-email") || ""}`,
+      `Kieli: ${languageText}`,
+      `Kohteen osoite: ${data.get("address") || ""}`,
+      `Mitä töitä tarvitaan: ${data.get("task") || ""}`,
+      `Toivottu aikataulu: ${data.get("date") || ""}`,
       `Kuvat: ${data.get("photos") || ""}`,
       `Lisätiedot: ${data.get("more") || ""}`
     ].join("\n");
