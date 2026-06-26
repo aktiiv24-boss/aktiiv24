@@ -220,6 +220,7 @@ const polishFallbackKeys = new Set([
   "faq4A",
   "labelEmail",
   "labelAddress",
+  "labelCityLocation",
   "labelTask",
   "labelPhotos",
   "photosYes",
@@ -303,12 +304,12 @@ document.querySelectorAll(".quote-form").forEach((form) => {
     const body = [
       `Nimi: ${data.get("client-name") || ""}`,
       `Puhelin: ${data.get("client-phone") || ""}`,
-      `Email: ${data.get("client-email") || ""}`,
-      `Kieli: ${languageText}`,
-      `Kohteen osoite: ${data.get("address") || ""}`,
-      `Mitä töitä tarvitaan: ${data.get("task") || ""}`,
+      `Sähköposti: ${data.get("client-email") || ""}`,
+      `Sopiva yhteydenottokieli: ${languageText}`,
+      `Kaupunki / kohteen sijainti: ${data.get("city-location") || ""}`,
+      `Minkälaista työtä tarvitset?: ${data.get("task") || ""}`,
       `Toivottu aikataulu: ${data.get("date") || ""}`,
-      `Kuvat: ${data.get("photos") || ""}`,
+      `Onko sinulla kuvia kohteesta?: ${data.get("photos") || ""}`,
       `Lisätiedot: ${data.get("more") || ""}`
     ].join("\n");
     const subject = encodeURIComponent("Tarjouspyyntö AKTiiV24-sivustolta");
