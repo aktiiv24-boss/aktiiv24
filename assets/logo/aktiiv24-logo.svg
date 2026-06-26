@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" role="img" aria-labelledby="title">
+  <title id="title">AKTiiV24</title>
+  <rect width="240" height="64" rx="8" fill="#111827"/>
+  <path d="M18 49 36 15h12l18 34H53l-3-7H33l-3 7H18Zm19-17h9l-4.5-10L37 32Z" fill="#fff"/>
+  <path d="M70 15h11v13l12-13h15L92 31l18 18H94L81 35v14H70V15Zm45 0h39v10h-14v24h-11V25h-14V15Z" fill="#e5e7eb"/>
+  <path d="M160 24h10v25h-10V24Zm0-10h10v7h-10v-7Zm16 10h10v25h-10V24Zm0-10h10v7h-10v-7Z" fill="#c1121f"/>
+  <path d="M191 15h12l8 22 8-22h12l-14 34h-12l-14-34Z" fill="#e5e7eb"/>
+  <path d="M19 56h202" stroke="#c1121f" stroke-width="4" stroke-linecap="round"/>
+</svg>
