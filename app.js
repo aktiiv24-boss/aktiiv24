@@ -12,12 +12,14 @@ const translations = {
   fi: {
     ...fiDefaults,
     pageTitle: "AKTiiV24 — rakennus- ja remonttityöt Suomessa",
-    metaDescription: "AKTiiV24 tekee sisäremontit, saunaremontit, lattian asennukset, kipsilevytyöt, maalaustyöt, purkutyöt, julkisivutyöt sekä ovien ja ikkunoiden asennukset Suomessa.",
+    metaDescription: "AKTiiV24 tekee rakennus- ja remonttitöitä Suomessa ja Uudellamaalla. Sisäremontit, saunaremontit, lattiat, kipsilevytyöt, maalaus, purkutyöt ja julkisivutyöt.",
+    ogDescription: "Rakennus- ja remonttityöt yksityisasiakkaille, taloyhtiöille, yrityksille ja urakoitsijoille. Palvelemme Uudellamaalla ja muualla Suomessa.",
     formThanks: "Kiitos! Lomake toimii tällä hetkellä esittelytilassa. Ota yhteyttä puhelimitse 041 749 1334 tai sähköpostilla aktiiv24@gmail.com."
   },
   en: {
     pageTitle: "AKTiiV24 — construction and renovation work in Finland",
-    metaDescription: "AKTiiV24 provides interior renovations, sauna renovations, floor installation, drywall work, painting, demolition, facade work and door and window installation in Finland.",
+    metaDescription: "AKTiiV24 provides construction and renovation work in Finland and Uusimaa: interior renovations, sauna renovations, floors, drywall work, painting, demolition and facade work.",
+    ogDescription: "Construction and renovation work for private clients, housing companies, businesses and contractors. We serve Uusimaa and other areas in Finland.",
     navServices: "Services", navPortfolio: "Portfolio", navAbout: "About", navWork: "Work", navContacts: "Contacts",
     ctaRequest: "Send request", ctaPortfolio: "View work",
     heroEyebrow: "Construction + order + result",
@@ -79,7 +81,8 @@ const translations = {
   },
   et: {
     pageTitle: "AKTiiV24 — ehitus- ja remonditööd Soomes",
-    metaDescription: "AKTiiV24 teeb Soomes siseremonte, saunaremonti, põrandate paigaldust, kipsplaaditöid, värvimist, lammutust, fassaaditöid ning uste ja akende paigaldust.",
+    metaDescription: "AKTiiV24 teeb ehitus- ja remonditöid Soomes ja Uusimaal: siseremont, saunaremont, põrandad, kipsplaaditööd, värvimine, lammutustööd ja fassaaditööd.",
+    ogDescription: "Ehitus- ja remonditööd eraklientidele, korteriühistutele, ettevõtetele ja alltöövõtjatele. Teenindame Uusimaal ja mujal Soomes.",
     navServices: "Teenused", navPortfolio: "Portfoolio", navAbout: "Meist", navWork: "Töö", navContacts: "Kontakt",
     ctaRequest: "Saada päring", ctaPortfolio: "Vaata töid",
     heroEyebrow: "Ehitus + kord + tulemus",
@@ -141,7 +144,8 @@ const translations = {
   },
   ru: {
     pageTitle: "AKTiiV24 — строительные и ремонтные работы в Финляндии",
-    metaDescription: "AKTiiV24 выполняет внутренние ремонты, ремонт саун, укладку полов, гипсокартонные работы, покраску, демонтаж, фасадные работы и установку дверей и окон в Финляндии.",
+    metaDescription: "AKTiiV24 выполняет строительные и ремонтные работы в Финляндии и Уусимаа: внутренние ремонты, сауны, полы, гипсокартон, покраска, демонтаж и фасады.",
+    ogDescription: "Строительные и ремонтные работы для частных клиентов, жилищных товариществ, компаний и подрядчиков. Работаем в Уусимаа и других регионах Финляндии.",
     navServices: "Услуги", navPortfolio: "Портфолио", navAbout: "О нас", navWork: "Работа", navContacts: "Контакты",
     ctaRequest: "Оставить заявку", ctaPortfolio: "Посмотреть работы",
     heroEyebrow: "Строительство + порядок + результат",
@@ -213,7 +217,7 @@ function applyLanguage(language) {
   document.title = dictionary.pageTitle;
   document.querySelector('meta[name="description"]')?.setAttribute("content", dictionary.metaDescription);
   document.querySelector('meta[property="og:title"]')?.setAttribute("content", dictionary.pageTitle);
-  document.querySelector('meta[property="og:description"]')?.setAttribute("content", dictionary.metaDescription);
+  document.querySelector('meta[property="og:description"]')?.setAttribute("content", dictionary.ogDescription || dictionary.metaDescription);
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
