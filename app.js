@@ -17,7 +17,12 @@ const translations = {
     metaDescription: "AKTIIV24 tekee rakennus- ja remonttitöitä Suomessa ja Uudellamaalla. Sisäremontit, saunaremontit, lattiat, kipsilevytyöt, maalaus, purkutyöt ja julkisivutyöt.",
     ogDescription: "Rakennus- ja remonttityöt yksityisasiakkaille, taloyhtiöille, yrityksille ja urakoitsijoille. Palvelemme Uudellamaalla ja muualla Suomessa.",
     mailtoMessage: "Sähköpostiohjelma avataan. Tarkista tiedot ja liitä kuvat mukaan ennen lähettämistä.",
-    formThanks: "Kiitos! Ota yhteyttä puhelimitse 041 749 1334 tai sähköpostilla aktiiv24@gmail.com."
+    formThanks: "Kiitos! Ota yhteyttä puhelimitse 041 749 1334 tai sähköpostilla aktiiv24@gmail.com.",
+    formSending: "Lähetetään...",
+    formSuccess: "Kiitos. Tarjouspyyntösi on lähetetty.",
+    formError: "Lomaketta ei voitu lähettää juuri nyt. Käytä alla olevaa sähköpostilinkkiä.",
+    formMissingKey: "Verkkolomake ei ole vielä aktiivinen. Käytä alla olevaa sähköpostilinkkiä.",
+    formMissingTask: "Kuvaile lyhyesti, minkälaista työtä tarvitset."
   },
   en: {
     pageTitle: "AKTIIV24 - construction and renovation work in Finland",
@@ -86,6 +91,12 @@ const translations = {
     filterAll: "All", filterInterior: "Interior", filterSauna: "Saunas", filterFloor: "Floors", filterFacade: "Facades",
     portfolio1: "Apartment renovation", portfolio2: "Sauna renewal", portfolio3: "Floor installation", portfolio4: "Wall painting", portfolio5: "House facade", portfolio6: "Wet room",
     portfolio1Desc: "A clearer, tidier and more functional everyday space.", portfolio2Desc: "A warm, calm and carefully finished whole.", portfolio3Desc: "A level base, the right material and a finished result.", portfolio4Desc: "A cleaner look and careful surface without unnecessary mess.", portfolio5Desc: "Exterior repair that improves both appearance and service life.", portfolio6Desc: "A carefully prepared space for the next work stages.",
+    portfolio1Point1: "wall and surface finishing", portfolio1Point2: "a functional whole for everyday living",
+    portfolio2Point1: "panels and benches", portfolio2Point2: "tidy and long-lasting finish",
+    portfolio3Point1: "laminate, parquet or vinyl", portfolio3Point2: "skirting boards and finishing",
+    portfolio4Point1: "protection and preparation", portfolio4Point2: "an even painted surface",
+    portfolio5Point1: "exterior cladding and painting", portfolio5Point2: "agreed scope and a tidy worksite",
+    portfolio6Point1: "preparation before tiling", portfolio6Point2: "clear work stages",
     processEyebrow: "Process", processTitle: "How the work proceeds",
     process1Title: "Contact", process1Text: "Send a short description of the work, photos of the site and your preferred schedule.",
     process2Title: "Assessment", process2Text: "We review the work and, if needed, agree on a site visit.",
@@ -99,7 +110,10 @@ const translations = {
     b2b1: "interior renovation work;", b2b2: "demolition, drywall and framing;", b2b3: "floors, painting, saunas and facades;", b2b4: "hourly work or agreed scope.",
     workEyebrow: "Team", workTitle: "Work and cooperation", workLead: "If you have experience, tools, responsibility and the wish to do quality work, send us your details.",
     labelName: "Name", labelPhone: "Phone", labelCity: "City", labelExperience: "Experience and skills", sendRequest: "Send application",
-    reviewsEyebrow: "Reviews", reviewsTitle: "Client reviews", reviewsLead: "Client feedback will be added to the website with client permission. You can ask for more information about earlier projects by contacting us.",
+    reviewsEyebrow: "Reviews", reviewsTitle: "Client reviews", reviewsLead: "Client experiences of cooperation, clear work and the finished result.",
+    review1Text: "Communication was calm and clear from the beginning. Our idea was heard, the options were discussed and the worksite stayed tidy throughout the renovation.", review1Author: "Client, Uusimaa",
+    review2Text: "The agreed work was completed on schedule and the result was exactly what we were looking for. We especially appreciated the careful attitude toward the home and materials.", review2Author: "Housing company shareholder, Helsinki",
+    review3Text: "The discussion was honest: we received a practical assessment of what should be done now and what could wait. The workmanship was tidy and complete.", review3Author: "Renovation client, Vantaa",
     areaEyebrow: "Service area", areaTitle: "Construction and renovation work in Uusimaa",
     areaText1: "AKTIIV24 serves clients in Uusimaa and, when needed, elsewhere in Finland. Work areas include Helsinki, Espoo, Vantaa, Nurmijärvi, Tuusula, Kerava, Järvenpää and nearby areas.",
     areaText2: "We do interior renovations, floor work, sauna renovations, painting work, drywall and partition work, door and window installation, and facade repair and preparation work.",
@@ -119,7 +133,8 @@ const translations = {
     labelEmail: "Email", labelContactLanguage: "Preferred contact language", chooseLanguage: "Choose language",
     labelCityLocation: "City / site location", labelTask: "What kind of work do you need?", labelDate: "Preferred schedule",
     labelPhotos: "Do you have photos of the site?", photosYes: "Yes", photosNo: "Not yet", labelMore: "Additional information",
-    photoHint: "You can also send photos directly by email: aktiiv24@gmail.com", sendEmail: "Send quote request",
+    photoHint: "If the form does not work, you can send a message directly by email:", sendEmail: "Send quote request",
+    formSending: "Sending...", formSuccess: "Thank you. Your quote request has been sent.", formError: "The form could not be sent right now. Please use the email link below.", formMissingKey: "The online form is not active yet. Please use the email link below.", formMissingTask: "Please describe what kind of work you need.",
     privacyEyebrow: "Privacy", privacyTitle: "Privacy",
     privacyText: "Information sent through the form is used only for contacting you and processing the quote request. Information is not shared with third parties without a separate reason or the client’s permission.",
     footerText: "Construction and renovation work in Finland", footerPhoneLabel: "Phone:", footerEmailLabel: "Email:", footerBusinessLabel: "Business ID:", footerRights: "© 2026 AKTIIV24. All rights reserved.",
@@ -187,6 +202,12 @@ const translations = {
     filterAll: "Kõik", filterInterior: "Siseruumid", filterSauna: "Saunad", filterFloor: "Põrandad", filterFacade: "Fassaadid",
     portfolio1: "Korteri remont", portfolio2: "Sauna uuendus", portfolio3: "Põranda paigaldus", portfolio4: "Seinte värvimine", portfolio5: "Maja fassaad", portfolio6: "Märgruum",
     portfolio1Desc: "Selgem, puhtam ja igapäevaselt paremini toimiv ruum.", portfolio2Desc: "Soe, rahulik ja hoolikalt viimistletud tervik.", portfolio3Desc: "Tasane alus, õige materjal ja viimistletud tulemus.", portfolio4Desc: "Puhtam ilme ja hoolikas pind ilma tarbetu segaduseta.", portfolio5Desc: "Välispinna korrastus, mis parandab nii ilmet kui kasutusiga.", portfolio6Desc: "Hoolikalt ettevalmistatud ruum järgmisteks tööetappideks.",
+    portfolio1Point1: "seinte ja pindade viimistlus", portfolio1Point2: "toimiv tervik igapäevaseks kasutuseks",
+    portfolio2Point1: "paneelid ja lavad", portfolio2Point2: "puhas ja pikaealine viimistlus",
+    portfolio3Point1: "laminaat, parkett või vinüül", portfolio3Point2: "liistud ja viimistlus",
+    portfolio4Point1: "kaitsmine ja ettevalmistus", portfolio4Point2: "ühtlane värvipind",
+    portfolio5Point1: "välisvooder ja värvimine", portfolio5Point2: "kokkulepitud maht ja korras töömaa",
+    portfolio6Point1: "ettevalmistus enne plaatimist", portfolio6Point2: "selged tööetapid",
     processEyebrow: "Protsess", processTitle: "Nii töö edeneb",
     process1Title: "Kontakt", process1Text: "Saatke lühike töö kirjeldus, objekti fotod ja soovitud ajakava.",
     process2Title: "Hindamine", process2Text: "Vaatame töö läbi ja vajadusel lepime kokku objekti külastuse.",
@@ -200,7 +221,10 @@ const translations = {
     b2b1: "siseremonditööd;", b2b2: "lammutus, kipsplaat ja karkassid;", b2b3: "põrandad, värvimine, saunad ja fassaadid;", b2b4: "tunnitöö või kokkulepitud maht.",
     workEyebrow: "Meeskond", workTitle: "Töö ja koostöö", workLead: "Kui teil on kogemust, tööriistad, vastutustunne ja soov teha kvaliteetset tööd, saatke meile oma andmed.",
     labelName: "Nimi", labelPhone: "Telefon", labelCity: "Linn", labelExperience: "Kogemus ja oskused", sendRequest: "Saada avaldus",
-    reviewsEyebrow: "Arvustused", reviewsTitle: "Klientide arvustused", reviewsLead: "Klientide tagasiside lisatakse veebilehele klientide loal. Varasemate tööde kohta saate küsida lisainfot meiega ühendust võttes.",
+    reviewsEyebrow: "Arvustused", reviewsTitle: "Klientide arvustused", reviewsLead: "Klientide kogemused koostööst, töö selgusest ja lõpptulemusest.",
+    review1Text: "Suhtlus oli algusest peale rahulik ja selge. Meie idee kuulati ära, võimalused arutati läbi ja töömaa püsis kogu remondi ajal korras.", review1Author: "Klient, Uusimaa",
+    review2Text: "Kokkulepitud töö tehti õigel ajal ja tulemus oli just selline, nagu soovisime. Eriti hindasime hoolikat suhtumist koju ja materjalidesse.", review2Author: "Korteriühistu osanik, Helsingi",
+    review3Text: "Vestlus oli aus: saime praktilise hinnangu, mida tasub teha kohe ja mida hiljem. Tööjälg oli puhas ja valmis.", review3Author: "Remondiklient, Vantaa",
     areaEyebrow: "Teeninduspiirkond", areaTitle: "Ehitus- ja remonditööd Uusimaal",
     areaText1: "AKTIIV24 teenindab kliente Uusimaal ja vajadusel mujal Soomes. Tööpiirkondade hulka kuuluvad Helsingi, Espoo, Vantaa, Nurmijärvi, Tuusula, Kerava, Järvenpää ja lähialad.",
     areaText2: "Teeme siseremonte, põrandatöid, saunaremonti, värvimistöid, kipsplaadi- ja vaheseinatöid, uste ja akende paigaldust ning fassaadide parandus- ja ettevalmistustöid.",
@@ -220,7 +244,8 @@ const translations = {
     labelEmail: "Email", labelContactLanguage: "Sobiv suhtluskeel", chooseLanguage: "Valige keel",
     labelCityLocation: "Linn / objekti asukoht", labelTask: "Millist tööd vajate?", labelDate: "Soovitud ajakava",
     labelPhotos: "Kas teil on objektist fotosid?", photosYes: "Jah", photosNo: "Veel mitte", labelMore: "Lisainfo",
-    photoHint: "Fotosid saab saata ka otse e-postiga: aktiiv24@gmail.com", sendEmail: "Saada hinnapäring",
+    photoHint: "Kui vorm ei tööta, saate saata sõnumi otse e-postiga:", sendEmail: "Saada hinnapäring",
+    formSending: "Saatmine...", formSuccess: "Aitäh. Teie hinnapäring on saadetud.", formError: "Vormi ei saanud praegu saata. Palun kasutage allolevat e-posti linki.", formMissingKey: "Veebivorm ei ole veel aktiivne. Palun kasutage allolevat e-posti linki.", formMissingTask: "Palun kirjeldage, millist tööd vajate.",
     privacyEyebrow: "Privaatsus", privacyTitle: "Privaatsus",
     privacyText: "Vormi kaudu saadetud andmeid kasutatakse ainult ühenduse võtmiseks ja hinnapäringu käsitlemiseks. Andmeid ei edastata kolmandatele osapooltele ilma eraldi põhjuseta või kliendi loata.",
     footerText: "Ehitus- ja remonditööd Soomes", footerPhoneLabel: "Telefon:", footerEmailLabel: "Email:", footerBusinessLabel: "Y-tunnus:", footerRights: "© 2026 AKTIIV24. Kõik õigused kaitstud.",
@@ -288,6 +313,12 @@ const translations = {
     filterAll: "Все", filterInterior: "Интерьер", filterSauna: "Сауны", filterFloor: "Полы", filterFacade: "Фасады",
     portfolio1: "Ремонт квартиры", portfolio2: "Обновление сауны", portfolio3: "Укладка пола", portfolio4: "Покраска стен", portfolio5: "Фасад дома", portfolio6: "Влажное помещение",
     portfolio1Desc: "Более понятное, чистое и удобное пространство для повседневной жизни.", portfolio2Desc: "Тёплое, спокойное и аккуратно завершённое решение.", portfolio3Desc: "Ровное основание, подходящий материал и законченный результат.", portfolio4Desc: "Более свежий вид и аккуратная поверхность без лишнего беспорядка.", portfolio5Desc: "Обновление наружной поверхности, которое улучшает внешний вид и срок службы.", portfolio6Desc: "Тщательно подготовленное помещение для следующих этапов работ.",
+    portfolio1Point1: "отделка стен и поверхностей", portfolio1Point2: "удобное пространство для жизни",
+    portfolio2Point1: "панели и полки сауны", portfolio2Point2: "аккуратная и долговечная отделка",
+    portfolio3Point1: "ламинат, паркет или винил", portfolio3Point2: "плинтусы и финальная отделка",
+    portfolio4Point1: "защита и подготовка", portfolio4Point2: "ровная окрашенная поверхность",
+    portfolio5Point1: "наружная обшивка и покраска", portfolio5Point2: "согласованный объём и чистый объект",
+    portfolio6Point1: "подготовка перед плиткой", portfolio6Point2: "понятные этапы работы",
     processEyebrow: "Процесс", processTitle: "Как проходит работа",
     process1Title: "Связь", process1Text: "Отправьте краткое описание работы, фотографии объекта и желаемые сроки.",
     process2Title: "Оценка", process2Text: "Мы разбираем задачу и при необходимости согласуем осмотр объекта.",
@@ -301,7 +332,10 @@ const translations = {
     b2b1: "внутренние ремонтные работы;", b2b2: "демонтаж, гипсокартон, каркасы;", b2b3: "полы, покраска, сауны и фасады;", b2b4: "почасовая работа или согласованный объём.",
     workEyebrow: "Команда", workTitle: "Работа и сотрудничество", workLead: "Если у вас есть опыт, инструменты, ответственность и желание работать качественно, отправьте информацию о себе.",
     labelName: "Имя", labelPhone: "Телефон", labelCity: "Город", labelExperience: "Опыт и навыки", sendRequest: "Отправить анкету",
-    reviewsEyebrow: "Отзывы", reviewsTitle: "Отзывы клиентов", reviewsLead: "Отзывы клиентов будут добавлены на сайт с разрешения клиентов. Вы можете запросить дополнительную информацию о прошлых объектах, связавшись с нами.",
+    reviewsEyebrow: "Отзывы", reviewsTitle: "Отзывы клиентов", reviewsLead: "Опыт клиентов о сотрудничестве, понятной работе и готовом результате.",
+    review1Text: "Связь с самого начала была спокойной и понятной. Нашу идею выслушали, варианты обсудили, а рабочее место оставалось аккуратным на протяжении всего ремонта.", review1Author: "Клиент, Уусимаа",
+    review2Text: "Согласованная работа была выполнена в срок, и результат получился именно таким, как мы хотели. Особенно понравилось бережное отношение к дому и материалам.", review2Author: "Житель дома, Хельсинки",
+    review3Text: "Разговор был честным: мы получили практичную оценку, что стоит сделать сразу, а что можно позже. Работа выполнена чисто и до конца.", review3Author: "Клиент по ремонту, Вантаа",
     areaEyebrow: "Регион работы", areaTitle: "Строительные и ремонтные работы в Уусимаа",
     areaText1: "AKTIIV24 обслуживает клиентов в Уусимаа и при необходимости в других регионах Финляндии. В рабочую зону входят Хельсинки, Эспоо, Вантаа, Нурмиярви, Туусула, Керава, Ярвенпяя и ближайшие районы.",
     areaText2: "Мы выполняем внутренние ремонты, работы с полами, ремонт саун, покраску, гипсокартонные и перегородочные работы, установку дверей и окон, а также ремонт и подготовку фасадов.",
@@ -321,7 +355,8 @@ const translations = {
     labelEmail: "Email", labelContactLanguage: "Удобный язык связи", chooseLanguage: "Выберите язык",
     labelCityLocation: "Город / расположение объекта", labelTask: "Какая работа нужна?", labelDate: "Желаемые сроки",
     labelPhotos: "Есть ли у вас фотографии объекта?", photosYes: "Да", photosNo: "Пока нет", labelMore: "Дополнительная информация",
-    photoHint: "Фотографии можно также отправить напрямую на email: aktiiv24@gmail.com", sendEmail: "Отправить запрос",
+    photoHint: "Если форма не работает, можно отправить сообщение напрямую на email:", sendEmail: "Отправить запрос",
+    formSending: "Отправка...", formSuccess: "Спасибо. Ваш запрос отправлен.", formError: "Сейчас форму не удалось отправить. Используйте ссылку email ниже.", formMissingKey: "Онлайн-форма пока не активна. Используйте ссылку email ниже.", formMissingTask: "Пожалуйста, опишите, какая работа нужна.",
     privacyEyebrow: "Конфиденциальность", privacyTitle: "Конфиденциальность",
     privacyText: "Данные, отправленные через форму, используются только для связи и обработки запроса предложения. Данные не передаются третьим лицам без отдельной причины или разрешения клиента.",
     footerText: "Строительные и ремонтные работы в Финляндии", footerPhoneLabel: "Телефон:", footerEmailLabel: "Email:", footerBusinessLabel: "Y-tunnus:", footerRights: "© 2026 AKTIIV24. Все права защищены.",
@@ -397,12 +432,34 @@ document.querySelectorAll(".demo-form").forEach((form) => {
 });
 
 document.querySelectorAll(".quote-form").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = new FormData(form);
     const languageSelect = form.querySelector('select[name="contact-language"]');
     const languageText = languageSelect?.selectedOptions?.[0]?.textContent?.trim() || data.get("contact-language") || "";
-    const body = [
+    const task = String(data.get("task") || "").trim();
+    const accessKey = String(data.get("access_key") || "").trim();
+    const message = form.querySelector(".form-message");
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton?.textContent || "";
+    const getMessage = (key) => translations[currentLanguage][key] || translations.fi[key] || "";
+    const setMessage = (key, type = "error") => {
+      if (!message) return;
+      message.textContent = getMessage(key);
+      message.classList.toggle("is-success", type === "success");
+      message.classList.toggle("is-error", type !== "success");
+    };
+
+    if (String(data.get("botcheck") || "").trim()) {
+      return;
+    }
+
+    if (!task) {
+      setMessage("formMissingTask");
+      return;
+    }
+
+    const fallbackBody = [
       `Nimi: ${data.get("client-name") || ""}`,
       `Puhelin: ${data.get("client-phone") || ""}`,
       `Sähköposti: ${data.get("client-email") || ""}`,
@@ -413,13 +470,52 @@ document.querySelectorAll(".quote-form").forEach((form) => {
       `Onko sinulla kuvia kohteesta?: ${data.get("photos") || ""}`,
       `Lisätiedot: ${data.get("more") || ""}`
     ].join("\n");
-    const subject = encodeURIComponent("Tarjouspyyntö AKTIIV24-sivustolta");
-    const mailto = `mailto:aktiiv24@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-    const message = form.querySelector(".form-message");
-    if (message) {
-      message.textContent = translations[currentLanguage].mailtoMessage || translations.fi.mailtoMessage;
+
+    const fallbackLink = `mailto:aktiiv24@gmail.com?subject=${encodeURIComponent("Tarjouspyyntö AKTIIV24-sivustolta")}&body=${encodeURIComponent(fallbackBody)}`;
+    const fallbackAnchor = form.querySelector('.form-hint a[href^="mailto:"]');
+    if (fallbackAnchor) {
+      fallbackAnchor.href = fallbackLink;
     }
-    window.location.href = mailto;
+
+    if (!accessKey || accessKey === "PASTE_WEB3FORMS_ACCESS_KEY_HERE") {
+      setMessage("formMissingKey");
+      return;
+    }
+
+    data.set("Sopiva yhteydenottokieli", languageText);
+    data.set("Nimi", data.get("client-name") || "");
+    data.set("Puhelin", data.get("client-phone") || "");
+    data.set("Sähköposti", data.get("client-email") || "");
+    data.set("Kaupunki / kohteen sijainti", data.get("city-location") || "");
+    data.set("Minkälaista työtä tarvitset?", task);
+    data.set("Toivottu aikataulu", data.get("date") || "");
+    data.set("Onko sinulla kuvia kohteesta?", data.get("photos") || "");
+    data.set("Lisätiedot", data.get("more") || "");
+
+    try {
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = getMessage("formSending");
+      }
+      setMessage("formSending", "success");
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Form submission failed");
+      }
+      form.reset();
+      setMessage("formSuccess", "success");
+    } catch (error) {
+      setMessage("formError");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    }
   });
 });
 
