@@ -2,6 +2,8 @@ const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const toTop = document.querySelector(".to-top");
 const languageButtons = document.querySelectorAll(".lang button");
+const heroSlides = document.querySelectorAll(".hero-slide");
+const heroDots = document.querySelectorAll(".hero-dots span");
 
 const fiDefaults = {};
 document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -354,4 +356,17 @@ toTop?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+function startHeroSlideshow() {
+  if (heroSlides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let activeSlide = 0;
+  window.setInterval(() => {
+    heroSlides[activeSlide].classList.remove("is-active");
+    heroDots[activeSlide]?.classList.remove("is-active");
+    activeSlide = (activeSlide + 1) % heroSlides.length;
+    heroSlides[activeSlide].classList.add("is-active");
+    heroDots[activeSlide]?.classList.add("is-active");
+  }, 5200);
+}
+
+startHeroSlideshow();
 applyLanguage(currentLanguage);
