@@ -212,6 +212,84 @@
     <div class="container footer-grid"><div><img class="footer-logo" src="assets/logo/aktiiv24-logo.png" alt="AKTIIV24"><p data-i18n="footerText">Rakennus- ja remonttityöt Suomessa</p></div><nav><a href="#services" data-i18n="navServices">Palvelut</a><a href="#portfolio" data-i18n="navPortfolio">Portfolio</a><a href="#about" data-i18n="navAbout">Meistä</a><a href="#work" data-i18n="navWork">Työ</a><a href="#contacts" data-i18n="navContacts">Yhteystiedot</a><a href="#privacy" data-i18n="privacyTitle">Tietosuoja</a></nav><p><strong>AKTIIV24</strong><br><span data-i18n="footerPhoneLabel">Puhelin:</span> <a href="tel:+358417491334">041 749 1334</a><br><span data-i18n="footerEmailLabel">Email:</span> <a href="mailto:aktiiv24@gmail.com">aktiiv24@gmail.com</a><br><span data-i18n="footerBusinessLabel">Y-tunnus:</span> 2825905-7<br><span data-i18n="footerArea">Toimialue: Uusimaa ja muu Suomi sopimuksen mukaan</span><br><span data-i18n="footerRights">© 2026 AKTIIV24. Kaikki oikeudet pidätetään.</span></p></div>
   </footer>
   <button class="to-top" type="button" aria-label="Ylös">↑</button>
+  <script>
+    window.AKTIIV24_INLINE_FORM = true;
+
+    document.querySelectorAll(".quote-form").forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        if (!form.reportValidity()) return;
+
+        const data = new FormData(form);
+        const message = form.querySelector(".form-message");
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton ? submitButton.textContent : "";
+        const successText = "Kiitos yhteydenotosta. Viestisi on lähetetty, ja palaamme asiaan mahdollisimman pian.";
+        const errorText = "Viestin lähetys ei onnistunut. Voit soittaa suoraan numeroon 041 749 1334 tai lähettää sähköpostia osoitteeseen aktiiv24@gmail.com.";
+
+        const setMessage = (text, type) => {
+          if (!message) return;
+          message.textContent = text;
+          message.classList.toggle("is-success", type === "success");
+          message.classList.toggle("is-error", type !== "success");
+        };
+
+        if (String(data.get("botcheck") || "").trim()) return;
+
+        const languageSelect = form.querySelector('select[name="contact-language"]');
+        const languageText = languageSelect?.selectedOptions?.[0]?.textContent?.trim() || data.get("contact-language") || "";
+        data.set("Sopiva yhteydenottokieli", languageText);
+        data.set("Nimi", data.get("client-name") || "");
+        data.set("Puhelin", data.get("client-phone") || "");
+        data.set("Sähköposti", data.get("client-email") || "");
+        data.set("Kaupunki / kohteen sijainti", data.get("city-location") || "");
+        data.set("Minkälaista työtä tarvitset?", data.get("task") || "");
+        data.set("Toivottu aikataulu", data.get("date") || "");
+        data.set("Onko sinulla kuvia kohteesta?", data.get("photos") || "");
+        data.set("Lisätiedot", data.get("more") || "");
+
+        const fallbackBody = [
+          `Nimi: ${data.get("client-name") || ""}`,
+          `Puhelin: ${data.get("client-phone") || ""}`,
+          `Sähköposti: ${data.get("client-email") || ""}`,
+          `Sopiva yhteydenottokieli: ${languageText}`,
+          `Kaupunki / kohteen sijainti: ${data.get("city-location") || ""}`,
+          `Minkälaista työtä tarvitset?: ${data.get("task") || ""}`,
+          `Toivottu aikataulu: ${data.get("date") || ""}`,
+          `Onko sinulla kuvia kohteesta?: ${data.get("photos") || ""}`,
+          `Lisätiedot: ${data.get("more") || ""}`
+        ].join("\n");
+        const fallbackAnchor = form.querySelector('.form-hint a[href^="mailto:"]');
+        if (fallbackAnchor) {
+          fallbackAnchor.href = `mailto:aktiiv24@gmail.com?subject=${encodeURIComponent("Tarjouspyyntö AKTIIV24-sivustolta")}&body=${encodeURIComponent(fallbackBody)}`;
+        }
+
+        try {
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Lähetetään...";
+          }
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: data
+          });
+          const result = await response.json();
+          if (!response.ok || !result.success) throw new Error(result.message || "Web3Forms error");
+          form.reset();
+          setMessage(successText, "success");
+        } catch (error) {
+          setMessage(errorText, "error");
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+        }
+      });
+    });
+  </script>
   <script src="app.js?v=form-web3forms-20260628"></script>
 </body>
 </html>
